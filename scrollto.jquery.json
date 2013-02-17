@@ -1,0 +1,30 @@
+{
+    "name": "scrollto",
+    "title": "jQuery scrollTo",
+    "description": "Scroll smooth to any element in your DOM.",
+    "keywords": [
+        "scrollto",
+        "smooth",
+        "scroll",
+        "hash"
+    ],
+    "version": "0.0.1",
+    "author": {
+        "name": "Yannick Albert",
+        "email": "mail@yckart.com",
+        "url": "https://github.com/yckart"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://yckart.com/mit/"
+        }
+    ],
+    "homepage": "http://yckart.github.com/jquery.scrollto.js",
+    "demo": "http://yckart.github.com/jquery.scrollto.js",
+    "docs": "https://github.com/yckart/jquery.scrollto.js",
+    "bugs": "https://github.com/yckart/jquery.scrollto.js/issues",
+    "dependencies": {
+        "jquery": ">=1.8"
+    }
+}

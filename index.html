@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+        <meta http-equiv='X-UA-Compatible' content='chrome=1'>
+
+        <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Numans'>
+        <style>
+            .page {position:absolute; top:0; width:100%; height:100%; color:white; font: 700 100px 'Numans', sans-serif; text-align:center; text-decoration: none; background:#111}
+            #item1 {left:0%}
+            #item2 {left:100%; top:100%}
+            #item3 {left:200%}
+            #item4 {left:300%; top:100%}
+        </style>
+        <title>jquery.scrollto.js | Scroll smooth to any element in your DOM</title>
+    </head>
+
+    <body>
+        <a href="#item2" id="item1" class="page">scrollTo</a>
+        <a href="#item3" id="item2" class="page">2</a>
+        <a href="#item4" id="item3" class="page">3</a>
+        <a href="#item1" id="item4" class="page">4</a>
+
+
+        <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+        <script src='jquery.scrollto.js'></script>
+        <script>
+            $('a').click(function(e){
+                $('html,body').scrollTo(this.hash, this.hash);
+                e.preventDefault();
+            });
+
+            // not really needed
+            $(window).resize(function(){
+                $('.page').css({
+                    fontSize: Math.max(Math.min($(window).outerWidth() / (1 * 6), parseFloat(Number.POSITIVE_INFINITY)), parseFloat(Number.NEGATIVE_INFINITY)) + 'px',
+                    lineHeight: $(window).height() + 'px'
+                });
+            }).resize();
+        </script>
+    </body>
+</html>
