@@ -23,6 +23,9 @@
             }
         }, options);
 
+        //This way we can scroll to one element
+        y = y || x;
+
         return this.each(function(){
             var elem = $(this);
             elem.stop().animate({
